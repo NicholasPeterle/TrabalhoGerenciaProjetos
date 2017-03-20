@@ -8,7 +8,6 @@ include('login/verifica_login.php');
 // Se não for permitido acesso nenhum ao arquivo
 // Inclua o trecho abaixo, ele redireciona o usuário para 
 // o formulário de login
-//Teste
 include('login/redirect.php');
 ?>
 
@@ -41,6 +40,10 @@ body, html {
 .menu {
     display: none;
 }
+h1 {font-family:Edwardian Script ITC; font-size:88px}
+p {font-family: calibre; font-size:28px}
+img {display: block;
+    margin: 0 auto;}
 </style>
 <body>
 
@@ -61,8 +64,14 @@ body, html {
   
     </div>
   </div>
-</div>
 
+  <img src="boi_vetor.png" width="400px">
+
+  <h1 text align="center"><b>WeBov</b></h1>
+  
+  <p text align="center">WeBov é um site que tem como objetivo disponibilizar informações sobre leilões do grupo Correia Costa Leilões. Através do WeBov é possível realizar pesquisas por raças e data de leilões já ocorridos, mostrando assim, informações como classificação, idade, peso, valor e valor por quilo dos leilões já ocorridos.</p>
+
+</div>
 
 </body>
 </html>
