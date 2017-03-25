@@ -54,20 +54,14 @@ include('login/redirect.php');
 					<p class="grey-text text-lighten-4"></p>
 				</div>
 				<div class="col l4 offset-l2 s12">
-            		<h5 class="white-text">Links</h5>
-            		<ul>
-            			<li><a class="grey-text text-lighten-3" href="#">Início</a></li>
-            			<li><a class="grey-text text-lighten-3" href="#about">Sistema</a></li>
-            			<li><a class="grey-text text-lighten-3" href="">Perfil</a></li>
-           				<li><a class="grey-text text-lighten-3" href="login/sair.php">Sair</a></li>
-            		</ul>
+            		
             	</div>
             </div>
 		</div>
 		<div class="footer-copyright">
 			<div class="container">
 				© 2017 Copyright Text
-				<a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+				<a class="grey-text text-lighten-4 right" href="#!"></a>
 			</div>
 		</div>
 	</footer>
