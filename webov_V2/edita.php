@@ -58,6 +58,7 @@ include('login/redirect.php');
 			<th>Usuário</th>
 			<th>Senha Criptografada</th>
 			<th>Ação</th>
+                        <th>Ação</th>
 		</tr>
 		<?php
 		while( $fetch = $pdo_verifica->fetch() ) {
@@ -67,7 +68,8 @@ include('login/redirect.php');
 			echo '<td>' . $fetch['user'] . '</td>';
 			echo '<td>' . $fetch['user_password'] . '</td>';
 			echo '<td> <a style="color:red;" href="?del=' . $fetch['user_id'] . '">Apagar</a> </td>';
-			echo '</tr>';
+			echo '<td> <a style="color:red;" href="?del=' . $fetch['user_id'] . '">Editar</a> </td>';
+                        echo '</tr>';
 		}
 
 // Apaga usuários
