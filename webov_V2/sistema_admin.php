@@ -16,7 +16,7 @@
     			<li><a href="indexadmin.php">Início</a></li>
 				<li><a href="sistema_admin.php">Sistema</a></li>
 				<li><a href="edita.php">Usuários</a></li>
-				<li><a href="login/sair.php">Sair</a></li>
+				<li><a href="login/sair.php">sair</a></li>
 			</ul>
 		</div>
 	</nav>

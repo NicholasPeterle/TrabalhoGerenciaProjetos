@@ -26,7 +26,8 @@ session_start();
     <br>
     <br>
     <div class="row container">
-        <form action="index.php" method="post" class="col s12">
+        
+        <form action="nivellogin.php" method="post" class="col s12">
             <div class="row">
                 <div class="row container left"> <h5> Login</h5></div>
                 <div class="input-field col s12 m12 l12">

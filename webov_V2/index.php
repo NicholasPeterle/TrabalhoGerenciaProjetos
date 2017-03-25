@@ -58,7 +58,7 @@ include('login/redirect.php');
             		<ul>
             			<li><a class="grey-text text-lighten-3" href="#">Início</a></li>
             			<li><a class="grey-text text-lighten-3" href="#about">Sistema</a></li>
-            			<li><a class="grey-text text-lighten-3" href="edita.php">Perfil</a></li>
+            			<li><a class="grey-text text-lighten-3" href="">Perfil</a></li>
            				<li><a class="grey-text text-lighten-3" href="login/sair.php">Sair</a></li>
             		</ul>
             	</div>
