@@ -68,7 +68,7 @@ include('login/redirect.php');
 			echo '<td>' . $fetch['user'] . '</td>';
 			echo '<td>' . $fetch['user_password'] . '</td>';
 			echo '<td> <a style="color:red;" href="?del=' . $fetch['user_id'] . '">Apagar</a> </td>';
-			echo '<td> <a style="color:red;" href="?del=' . $fetch['user_id'] . '">Editar</a> </td>';
+			echo '<td> <a style="color:red;" href="editasenha.php">Editar</a> </td>';
                         echo '</tr>';
 		}
 
