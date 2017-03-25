@@ -69,7 +69,7 @@ img {display: block;
 
   <h1 text align="center"><b>WeBov</b></h1>
   
-  <p text align="center">WeBov é um site que tem como objetivo disponibilizar informações sobre leilões do grupo Correia Costa Leilões. Através do WeBov é possível realizar pesquisas por raças e data de leilões já ocorridos, mostrando assim, informações como classificação, idade, peso, valor e valor por quilo dos leilões já ocorridos.</p>
+  <p text align="center"> WeBov é um site que tem como objetivo disponibilizar informações sobre leilões do grupo Correia Costa Leilões. Através do WeBov é possível realizar pesquisas por raças e data de leilões já ocorridos, mostrando assim, informações como classificação, idade, peso, valor e valor por quilo dos leilões já ocorridos.</p>
 
 </div>
 
