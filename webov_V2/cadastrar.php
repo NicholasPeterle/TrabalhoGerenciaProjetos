@@ -8,7 +8,8 @@ $erro = false;
 
 // Verifica se algo foi postado para publicar ou editar
 if ( isset( $_POST ) && ! empty( $_POST ) ) {
-	// Cria as variáveis
+	// Cria as variáveis]
+      
 	foreach ( $_POST as $chave => $valor ) {
 		$$chave = $valor;
 		
@@ -42,7 +43,7 @@ if ( isset( $_POST ) && ! empty( $_POST ) ) {
 			
 		// Se o usuário não existir, cadastra novo
 		} else {
-                        
+                    echo 'entrei';
 			$pdo_insere = $conexao_pdo->prepare('INSERT INTO usuarios (user, user_password, user_name) VALUES (?, ?, ?)');
 			$pdo_insere->execute( array( $form_usuario, crypt( $form_senha ), $form_nome ) );
                         header('location: login.php');
@@ -71,23 +72,23 @@ if ( isset( $_POST ) && ! empty( $_POST ) ) {
 		</nav>
 		<br>
 		<div class="row container">
-			<form class="col s12">
+                    <form action="" method="POST" class="col s12">
 				<div class="row">
 					<div class="input-field col s12 m12 l12">
-						<input placeholder="Name" id="first_name" type="text" name="form_name" class="validate">
-						<label for="first_name">Name</label>
+						<input placeholder="Nome" type="text" name="form_nome" class="validate">
+						<label for="first_name">Nome</label>
 					</div>
 				</div>
 				<div class="row">
 					<div class="input-field col s12 m12 l12">
-						<input id="email" name="form_usuario" type="email" class="validate">
+						<input name="form_usuario" type="email" class="validate">
 						<label for="email">Email</label>
 					</div>
 				</div>
 				<div class="row">
 					<div class="input-field col s12 m12 l12">
-						<input id="password" type="password" name="form_senha" class="validate">
-						<label for="password">Password</label>
+						<input type="password" name="form_senha" class="validate">
+						<label for="password">senha</label>
 					</div>
 				</div>
 				<?php if ( ! empty ( $erro ) ) :?>
@@ -97,7 +98,7 @@ if ( isset( $_POST ) && ! empty( $_POST ) ) {
 				<?php endif; ?>
 				<div class="row">
 					<div class="col s12">
-						<button class="btn brown darken-4 waves-effect waves-light" type="submit" value="Entrar">Submit
+						<button class="btn brown darken-4 waves-effect waves-light" type="submit" value="Entrar">Salvar
 							<i class="material-icons right">send</i>
   						</button>
 					</div>

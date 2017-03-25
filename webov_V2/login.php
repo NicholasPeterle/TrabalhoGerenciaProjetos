@@ -31,12 +31,12 @@ session_start();
                 <div class="row container left"> <h5> Login</h5></div>
                 <div class="input-field col s12 m12 l12">
                     <i class="material-icons prefix">email</i>
-                    <input id="icon_email" type="email" class="validate">
+                    <input id="icon_email" type="text" name="usuario" class="validate">
                     <label for="icon_email">Email</label>
                 </div>
                 <div class="input-field col s12 m12 l12">
                     <i class="material-icons prefix">lock</i>
-                    <input id="icon_lock" type="password" class="validate">
+                    <input id="icon_lock" type="password" name="senha" class="validate">
                     <label for="icon_lock">Senha</label>
                     
                     <a href="" class="forgot_link">Esqueceu a senha?</a>
