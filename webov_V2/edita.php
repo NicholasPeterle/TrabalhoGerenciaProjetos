@@ -68,7 +68,7 @@ include('login/redirect.php');
 			echo '<td>' . $fetch['user'] . '</td>';
 			echo '<td>' . $fetch['user_password'] . '</td>';
 			echo '<td> <a style="color:red;" href="?del=' . $fetch['user_id'] . '">Apagar</a> </td>';
-			echo '<td> <a style="color:red;" href="editasenha.php">Editar</a> </td>';
+			echo '<td> <a style="color:red;" href="editasenha.php?nome='.$fetch['user_name'] .'&email='.$fetch['user'].'&id='.$fetch['user_id'].'">Editar</a> </td>';
                         echo '</tr>';
 		}
 
@@ -79,3 +79,11 @@ if ( isset( $_GET['del'] ) ) {
 	$pdo_insere->execute( array( (int)$_GET['del'] ) );
 	header('location: edita.php');
 }
+//if ( isset( $_GET['edit'] ) ) {
+	// Delete de cara (sem confirmação)	$pdo_insere = $conexao_pdo->prepare('SELECT FROM usuarios WHERE user_id=?');
+//	$pdo_insere = $conexao_pdo->prepare('SELECT FROM usuarios WHERE user_id=?');
+//       $pdo_insere->execute( array( (int)$_GET['edit'] ) );
+ //       $id= $_GET['user_id'];
+   //     
+     //   header('location: editasenha.php?id="$id"');
+//}

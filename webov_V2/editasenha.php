@@ -1,10 +1,23 @@
 <?php
+
+$id = $_GET['id'];
+$form_usuario = $_GET['email'];
+$form_nome = $_GET['nome'];
+// Inclui o arquivo de configuração
 include('login/config.php');
 
 // Variavél para preencher o erro (se existir)
 $erro = false;
 
+// Inclui o arquivo de verificação de login
+include('login/verifica_login.php');
+
+// Se não for permitido acesso nenhum ao arquivo
+// Inclua o trecho abaixo, ele redireciona o usuário para 
+// o formulário de login
+include('login/redirect.php');
 // Verifica se algo foi postado para publicar ou editar
+
 if ( isset( $_POST ) && ! empty( $_POST ) ) {
 	// Cria as variáveis]
       
@@ -29,12 +42,12 @@ if ( isset( $_POST ) && ! empty( $_POST ) ) {
 	
 	// Captura os dados da linha
 	$user_id = $pdo_verifica->fetch();
-	$user_id = $user_id['user_id'];
+	$user_id = $id;
 	
 	// Verifica se tem algum erro
 	if ( ! $erro ) {
 		// Se o usuário existir, atualiza
-		if ( ! empty( $user_id ) ) {
+		if ( ! empty( $id ) ) {
 			header('location: login.php');
                         $pdo_insere = $conexao_pdo->prepare('UPDATE usuarios SET user=?, user_password=?, user_name=? WHERE user_id=?');
 			$pdo_insere->execute( array( $form_usuario,  crypt( $form_senha ), $form_nome, $user_id ) );
@@ -74,13 +87,13 @@ if ( isset( $_POST ) && ! empty( $_POST ) ) {
                     <form action="" method="POST" class="col s12">
                                 <div class="row">
 					<div class="input-field col s12 m12 l12">
-						<input placeholder="Nome" type="text" name="form_nome" class="validate">
+                                            <input placeholder="Nome" type="text" name="form_nome" value="<?php echo $form_nome ?>"class="validate">
 						<label for="first_name">Nome</label>
 					</div>
 				</div>
 				<div class="row">
 					<div class="input-field col s12 m12 l12">
-						<input name="form_usuario" type="email" class="validate">
+                                            <input name="form_usuario" type="email" value="<?php echo $form_usuario ?>"class="validate">
 						<label for="email">Email</label>
 					</div>
 				</div>
