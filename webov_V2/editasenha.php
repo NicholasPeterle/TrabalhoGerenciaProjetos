@@ -78,7 +78,13 @@ if ( isset( $_POST ) && ! empty( $_POST ) ) {
                 <div class="nav-wrapper container">
     		<a href="#" class="brand-logo center">Alterar a Senha</a>
     		<ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="edita.php">Voltar</a></li>
+                    <li><?php 
+                        if($_SESSION['user_id'] == 1)
+                        echo "<a href='edita.php'>Voltar</a>";
+                        else 
+                            echo "<a href='perfil.php'>Voltar</a>";
+                        ?>    
+                    </li>
         	</ul>
 			</div>
 		</nav>
