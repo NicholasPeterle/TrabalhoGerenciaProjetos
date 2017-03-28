@@ -20,8 +20,10 @@
 			</ul>
 		</div>
 	</nav>
-    <center><a href="pesquisaraca.php">Busca Leilão por Raça</a></center>
-    <center><a href="pesquisadata.php">Busca Leilão por Data</a></center>
+        <br>
+        <br>
+        <br>
+<center><a href="pesquisaraca.php"><button type="button" class="btn btn-success" href="pesquisaraca.php">Busca Leilão</button></a></center>
 	<!-- Jquery-->
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <!-- Materialize JS -->

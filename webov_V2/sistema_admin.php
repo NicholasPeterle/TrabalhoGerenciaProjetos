@@ -12,6 +12,7 @@ if ($_SESSION['user_id'] != 1) {
 	<title>Editar</title>
 	<!-- Materialize CSS -->
 	<link rel="stylesheet" href="css/materialize.css">
+        <link rel="stylesheet" href="css/buttons.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
@@ -29,10 +30,10 @@ if ($_SESSION['user_id'] != 1) {
 	</nav>
 
 	<!-- Jquery-->
-    <center><a href="cadastrar_leilao.php">Incluir Leilão</a></center> 
-    <center><a href="editaleilao.php">Edita Leilão</a></center> 
-    <center><a href="pesquisaraca.php">Busca Leilão por Raça</a></center>
-    <center><a href="pesquisadata.php">Busca Leilão por Data</a></center>
+        <br><br><br>
+    <center><a class="button darkbrown" href="cadastrar_leilao.php">Incluir Leilão</a></center> 
+    <center><a class="button darkbrown" href="editaleilao.php">Edita Leilão</a></center> 
+    <center><a class="button darkbrown" href="pesquisaraca.php">Busca Leilão</a></center>
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <!-- Materialize JS -->
     <script src="js/materialize.js"></script
