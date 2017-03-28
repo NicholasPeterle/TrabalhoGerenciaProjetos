@@ -64,7 +64,7 @@ if ( isset( $_POST ) && ! empty( $_POST ) ) {
 				<div class="row">
 					<div class="input-field col s12 m12 l12">
                                             <input name="form_tipo" type="text" class="validate">
-						<label for="tipo">tipo</label>
+						<label for="tipo">Raça</label>
 					</div>
 				</div>
 				<div class="row">
