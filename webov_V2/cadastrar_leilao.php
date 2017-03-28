@@ -1,12 +1,6 @@
 <?php
 // Inclui o arquivo de configuração
 //TESTE
-session_start();
-
-if ($_SESSION['user_id'] != 1) {
-    return header('location: index.php');
-}
-
 include('login/config.php');
 
 // Variavél para preencher o erro (se existir)

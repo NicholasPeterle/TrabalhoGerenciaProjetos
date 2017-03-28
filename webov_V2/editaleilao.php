@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <?php
 // Inclui o arquivo de configuração
-session_start();
-
-if ($_SESSION['user_id'] != 1) {
-    return header('location: index.php');
-}
-
 include('login/config.php');
 
 // Variavél para preencher o erro (se existir)
@@ -19,7 +13,6 @@ include('login/verifica_login.php');
 // Inclua o trecho abaixo, ele redireciona o usuário para 
 // o formulário de login
 include('login/redirect.php');
-
 ?>
 <html lang="pt-br">
 <head>
