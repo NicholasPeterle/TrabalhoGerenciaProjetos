@@ -1,7 +1,7 @@
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
-	<title>pesquisa simples com PDO</title>
+	<title>Pesquisa</title>
 	<!-- Materialize CSS -->
 	<link rel="stylesheet" href="css/materialize.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -26,10 +26,39 @@
   <div class="row">
   
   <div class="input-field col s12 m12 l2">    
+      <fieldset>
+          <legend>Pesquisa por Raça</legend>
+          <p><input name="cxnome" type="text" id="cxnome" value="" size="30"></p>
+           <input type="submit" name="pesquisar" value="Pesquisar">
+           <input type="reset" name="Submit2" value="Limpar">
+  </div>
+  </div>
+ 
+</label>
+</form>
+<form name="form1" method="post" action="resultadobusca.php" class="col s12">
+  <div class="row">
+  
+  <div class="input-field col s12 m12 l2">    
   <input name="cxnome" type="text" id="cxnome" value="" size="30">
   </div>
   </div>
+  <label>
+  &nbsp;&nbsp;
+  <input type="submit" name="pesquisar" value="Pesquisar">
+  </label>
+&nbsp;
+<label>
+<input type="reset" name="Submit2" value="Limpar">
+</label>
+</form>
+<form name="form1" method="post" action="resultadobusca.php" class="col s12">
+  <div class="row">
   
+  <div class="input-field col s12 m12 l2">    
+  <input name="cxnome" type="text" id="cxnome" value="" size="30">
+  </div>
+  </div>
   <label>
   &nbsp;&nbsp;
   <input type="submit" name="pesquisar" value="Pesquisar">
