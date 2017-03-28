@@ -10,15 +10,11 @@ include('login/verifica_login.php');
 // Inclua o trecho abaixo, ele redireciona o usuário para 
 // o formulário de login
 include('login/redirect.php');
- $nome=$_POST["cxnome"];
- $pesquisa=$_POST['pesquisar'];
-
- if(isset($pesquisa)&&!empty($nome)){
-	
-        $stmt = $conexao_pdo->prepare("select * from leilao where tipo like :letra order by valor");
-	$stmt->bindValue(':letra', '%'.$nome.'%', PDO::PARAM_STR);
-	$stmt->execute();
-	$resultados = $stmt->rowCount();
+$pesquisa=$_POST['pesquisar'];
+if(!empty($_POST["cxnome"]) && empty($_POST["cxdata"])) 
+    $nome=$_POST["cxnome"];
+else  
+    $data=$_POST["cxdata"];
  ?>
 <html lang="pt-br">
 <head>
@@ -58,10 +54,17 @@ include('login/redirect.php');
                         <th>peso</th>
                         <th>valor</th>
                         <th>valor/kg</th>
-                        
-                        
-		</tr>
-		<?php
+</tr>
+<?php
+if(isset($pesquisa)&&!empty($nome)){
+	
+        $stmt = $conexao_pdo->prepare("select * from leilao where tipo like :letra order by valor");
+	$stmt->bindValue(':letra', '%'.$nome.'%', PDO::PARAM_STR);
+	$stmt->execute();
+	$resultados = $stmt->rowCount();
+ 
+
+		
                 if($resultados>=1){
 		while( $fetch = $stmt->fetch() ) {
 			echo '<tr>';
@@ -96,6 +99,45 @@ include('login/redirect.php');
 //	echo "Não existe usuario cadastrado";
    //}
 	}
+ else  {
+        
+        $stmt = $conexao_pdo->prepare("select * from leilao where data like :letra order by valor");
+	$stmt->bindValue(':letra', '%'.$data.'%', PDO::PARAM_STR);
+	$stmt->execute();
+	$resultados = $stmt->rowCount();
+
+
+
+                if($resultados>=1){
+		while( $fetch = $stmt->fetch() ) {
+			echo '<tr>';
+			echo '<td>' . $fetch['id'] . '</td>';
+			echo '<td>' . $fetch['data'] . '</td>';
+			echo '<td>' . $fetch['tipo'] . '</td>';
+			echo '<td>' . $fetch['idade'] . '</td>';
+                        echo '<td>' . $fetch['sexo'] . '</td>';
+                        echo '<td>' . $fetch['peso'] . '</td>';
+                        echo '<td>' . $reais . $fetch['valor'] . '</td>';
+                        echo '<td>' . $reais .$fetch['valorkg'] . '</td>';
+			//echo '<td> <a style="color:red;" href="?del=' . $fetch['id'] . '">Apagar</a> </td>';
+			//echo '<td> <a style="color:red;" href="editasenha.php?nome='.$fetch['user_name'] .'&email='.$fetch['user'].'&id='.$fetch['user_id'].'">Editar</a> </td>';
+                        echo '</tr>';
+		}
+  echo "Resultado(s) encontrado(s): ".$resultados."<br /><br />";
+  //while($reg = $stmt->fetch(PDO::FETCH_OBJ))
+  //{     
+        
+       // echo $reg->id." - ";
+       // echo $reg->data."<br />";
+       // echo $reg->tipo."<br />";
+      //  echo $reg->idade."<br />";
+      //  echo $reg->sexo."<br />";
+     //   echo $reg->valor."<br />";
+     //   echo $reg->valorkg."<br />";
+        
+   //}
+	}
+ }
 //else{	
   //  echo "Preencha o campo de pesquisa";	}
  ?>

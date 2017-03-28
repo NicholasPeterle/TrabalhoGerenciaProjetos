@@ -19,12 +19,11 @@
 			</ul>
 		</div>
 	</nav>
-<center><h4 >Pesquisa Boi</h3></center>
+<center><h4 >Pesquisa</h3></center>
 <p>
 
   <form name="form1" method="post" action="resultadobusca.php" class="col s12">
   <div class="row">
-  
   <div class="input-field col s12 m12 l2">    
       <fieldset>
           <legend>Pesquisa por Raça</legend>
@@ -33,41 +32,19 @@
            <input type="reset" name="Submit2" value="Limpar">
   </div>
   </div>
- 
-</label>
 </form>
 <form name="form1" method="post" action="resultadobusca.php" class="col s12">
   <div class="row">
-  
   <div class="input-field col s12 m12 l2">    
-  <input name="cxnome" type="text" id="cxnome" value="" size="30">
+      <fieldset>
+          <legend>Pesquisa por Data</legend>
+          <p><input name="cxdata" type="date" id="cxdata" value="" size="30"></p>
+           <input type="submit" name="pesquisar" value="Pesquisar">
+           <input type="reset" name="Submit2" value="Limpar">
   </div>
   </div>
-  <label>
-  &nbsp;&nbsp;
-  <input type="submit" name="pesquisar" value="Pesquisar">
-  </label>
-&nbsp;
-<label>
-<input type="reset" name="Submit2" value="Limpar">
-</label>
 </form>
-<form name="form1" method="post" action="resultadobusca.php" class="col s12">
-  <div class="row">
-  
-  <div class="input-field col s12 m12 l2">    
-  <input name="cxnome" type="text" id="cxnome" value="" size="30">
-  </div>
-  </div>
-  <label>
-  &nbsp;&nbsp;
-  <input type="submit" name="pesquisar" value="Pesquisar">
-  </label>
-&nbsp;
-<label>
-<input type="reset" name="Submit2" value="Limpar">
-</label>
-</form>
+
 	<!-- Jquery-->
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <!-- Materialize JS -->
