@@ -1,6 +1,12 @@
 <?php
 // Inclui o arquivo de configuração
 //TESTE
+session_start();
+
+if (empty($_SESSION['admin'])) {
+    return header('location: index.php');
+}
+
 include('login/config.php');
 
 // Variavél para preencher o erro (se existir)
@@ -46,9 +52,9 @@ if ( isset( $_POST ) && ! empty( $_POST ) ) {
 	<body>
 		<nav class="brown darken-4">
     		<div class="nav-wrapper container">
-    		<a href="#" class="brand-logo center">Cadastrar-se</a>
+    		<a href="#" class="brand-logo center">Cadastrar Gado</a>
     		<ul id="nav-mobile" class="right hide-on-med-and-down">
-        		<li><a href="login.php">Login</a></li>
+                    <li><a href="sistema_admin.php">Voltar</a></li>
         	</ul>
 			</div>
 		</nav>

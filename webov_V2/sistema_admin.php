@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php
+session_start();
+
+if (empty($_SESSION['admin'])) {
+    return header('location: index.php');
+}
+?>
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">

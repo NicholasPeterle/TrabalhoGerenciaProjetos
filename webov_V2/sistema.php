@@ -20,7 +20,7 @@
 			</ul>
 		</div>
 	</nav>
-
+    <center><a href="pesquisaleilao.php">Busca Leilão</a></center> 
 	<!-- Jquery-->
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <!-- Materialize JS -->

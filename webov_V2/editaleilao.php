@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <?php
 // Inclui o arquivo de configuração
+session_start();
+
+if (empty($_SESSION['admin'])) {
+    return header('location: index.php');
+}
 include('login/config.php');
 
 // Variavél para preencher o erro (se existir)
