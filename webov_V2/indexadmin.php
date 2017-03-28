@@ -9,6 +9,9 @@ include('login/verifica_login.php');
 // Inclua o trecho abaixo, ele redireciona o usuário para 
 // o formulário de login
 include('login/redirect.php');
+if($_SESSION['user_id'] != 1){
+    header('location:index.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

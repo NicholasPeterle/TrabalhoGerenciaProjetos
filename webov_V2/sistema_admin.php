@@ -24,7 +24,7 @@ if ($_SESSION['user_id'] != 1) {
     			<li><a href="indexadmin.php">Início</a></li>
 				<li><a href="sistema_admin.php">Sistema</a></li>
 				<li><a href="edita.php">Usuários</a></li>
-				<li><a href="login/sair.php">sair</a></li>
+				<li><a href="login/sair.php">Sair</a></li>
 			</ul>
 		</div>
 	</nav>

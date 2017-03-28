@@ -3,8 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/var/www/sites/Webov/TrabalhoGerenciaProjetos/webov_V2/sistema.php</file>
-            <file>file:/var/www/sites/Webov/TrabalhoGerenciaProjetos/webov_V2/nivellogin.php</file>
+            <file>file:/var/www/sites/Webov/TrabalhoGerenciaProjetos/webov_V2/perfil.php</file>
+            <file>file:/var/www/sites/Webov/TrabalhoGerenciaProjetos/webov_V2/cadastrar_leilao.php</file>
+            <file>file:/var/www/sites/Webov/TrabalhoGerenciaProjetos/webov_V2/sistema_admin.php</file>
+            <file>file:/var/www/sites/Webov/TrabalhoGerenciaProjetos/webov_V2/pesquisaraca.php</file>
             <file>file:/var/www/sites/Webov/TrabalhoGerenciaProjetos/webov_V2/resultadobusca.php</file>
         </group>
     </open-files>
