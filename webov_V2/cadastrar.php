@@ -2,7 +2,6 @@
 // Inclui o arquivo de configuração
 //TESTE
 include('login/config.php');
-
 // Variavél para preencher o erro (se existir)
 $erro = false;
 

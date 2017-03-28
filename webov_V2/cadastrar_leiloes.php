@@ -21,36 +21,26 @@ if ( isset( $_POST ) && ! empty( $_POST ) ) {
 	}
 	
 	// Verifica se as variáveis foram configuradas
-	if ( empty( $form_tipo ) || empty( $form_idade ) || empty( $form_valor )
+	if (empty( $form_tipo ) || empty( $form_idade ) || empty( $form_valor )
                 ||empty($form_peso) || empty( $form_valorkg ) || empty( $form_data)) {
 		$erro = 'Existem campos em branco.';
 	}
-	$pdo_insere = $conexao_pdo->prepare('INSERT INTO leilao (tipo, idade, peso, valor, valorkg, data) VALUES (?, ?, ?, ?, ?, ?)');
-			$pdo_insere->execute( array( $form_tipo, $form_idade, $form_peso, $form_valor, $form_valorkg, $form_data) );
-                        echo "<script type='javascript'>alert('Cadastro efetuado com sucesso!');";
-                        header('location: indexadmin.php');
+	
 	// Verifica se o usuário existe
-	//$pdo_verifica = $conexao_pdo->prepare('SELECT * FROM leilao WHERE  = ?');
+	//$pdo_verifica = $conexao_pdo->prepare('SELECT * FROM usuarios WHERE user = ?');
 	//$pdo_verifica->execute( array( $form_usuario ) );
 	
 	// Captura os dados da linha
-	$leilao_id = $pdo_verifica->fetch();
-	$leilao_id = $leilao_id['id'];
+	//$user_id = $pdo_verifica->fetch();
+	//$user_id = $user_id['user_id'];
 	
 	// Verifica se tem algum erro
-	//if ( ! $erro ) {
-		// Se o cadastro do boi existir, atualiza
-		//if ( ! empty( $user_id ) ) {
-		//	header('location: login.php');
-                //      $pdo_insere = $conexao_pdo->prepare('UPDATE usuarios SET user=?, user_password=?, user_name=? WHERE user_id=?');
-		//	$pdo_insere->execute( array( $form_usuario,  crypt( $form_senha ), $form_nome, $user_id ) );
-			
-		// Se o usuário não existir, cadastra novo
-		//} else {
-                    //echo 'entrei';
-			
-                        
-              //  }
+	if ( ! $erro ) {
+                    echo 'entrei';
+			$pdo_insere = $conexao_pdo->prepare('INSERT INTO leilao (tipo, idade, valor, valorkg, data, peso) VALUES (?, ?, ?, ?, ?, ?)');
+			$pdo_insere->execute( array( $form_tipo, $form_idade, $form_valor, $form_valorkg, $form_data, $form_peso));
+                        header('location: indexadmin.php');  
+                }
 	}
 
 ?>

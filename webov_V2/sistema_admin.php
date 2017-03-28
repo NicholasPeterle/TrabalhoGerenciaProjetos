@@ -22,7 +22,8 @@
 	</nav>
 
 	<!-- Jquery-->
-    <center><a href="cadastrar_leiloes.php">Incluir Leilão</a></center> 
+    <center><a href="cadastrar_leilao.php">Incluir Leilão</a></center> 
+    <center><a href="editaleilao.php">edita Leilão</a></center> 
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <!-- Materialize JS -->
     <script src="js/materialize.js"></script
