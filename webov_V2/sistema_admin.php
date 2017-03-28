@@ -31,7 +31,8 @@ if ($_SESSION['user_id'] != 1) {
 	<!-- Jquery-->
     <center><a href="cadastrar_leilao.php">Incluir Leilão</a></center> 
     <center><a href="editaleilao.php">Edita Leilão</a></center> 
-    <center><a href="pesquisaleilao.php">Busca Leilão</a></center> 
+    <center><a href="pesquisaraca.php">Busca Leilão por Raça</a></center>
+    <center><a href="pesquisadata.php">Busca Leilão por Data</a></center>
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <!-- Materialize JS -->
     <script src="js/materialize.js"></script
