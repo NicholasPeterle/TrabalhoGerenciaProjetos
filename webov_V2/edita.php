@@ -77,13 +77,6 @@ if ( isset( $_GET['del'] ) ) {
 	// Delete de cara (sem confirmação)
 	$pdo_insere = $conexao_pdo->prepare('DELETE FROM usuarios WHERE user_id=?');
 	$pdo_insere->execute( array( (int)$_GET['del'] ) );
+       
 	header('location: edita.php');
 }
-//if ( isset( $_GET['edit'] ) ) {
-	// Delete de cara (sem confirmação)	$pdo_insere = $conexao_pdo->prepare('SELECT FROM usuarios WHERE user_id=?');
-//	$pdo_insere = $conexao_pdo->prepare('SELECT FROM usuarios WHERE user_id=?');
-//       $pdo_insere->execute( array( (int)$_GET['edit'] ) );
- //       $id= $_GET['user_id'];
-   //     
-     //   header('location: editasenha.php?id="$id"');
-//}

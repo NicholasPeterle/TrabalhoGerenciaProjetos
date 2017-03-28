@@ -48,7 +48,7 @@ if ( isset( $_POST ) && ! empty( $_POST ) ) {
 	if ( ! $erro ) {
 		// Se o usuário existir, atualiza
 		if ( ! empty( $id ) ) {
-			header('location: login.php');
+			header('location: nivellogin.php');
                         $pdo_insere = $conexao_pdo->prepare('UPDATE usuarios SET user=?, user_password=?, user_name=? WHERE user_id=?');
 			$pdo_insere->execute( array( $form_usuario,  crypt( $form_senha ), $form_nome, $user_id ) );
 			
@@ -115,8 +115,13 @@ if ( isset( $_POST ) && ! empty( $_POST ) ) {
 					</tr>
 				<?php endif; ?>
 				<div class="row">
+                                    <script>
+                                        function alerta(){
+                                            alert("Senha alterada com Sucesso");
+                                        }
+                                        </script>
 					<div class="col s12">
-						<button class="btn brown darken-4 waves-effect waves-light" type="submit" value="Entrar">Salvar
+						<button class="btn brown darken-4 waves-effect waves-light" type="submit" value="Entrar" onclick="alerta()">Salvar
 							<i class="material-icons right">send</i>
   						</button>
 					</div>

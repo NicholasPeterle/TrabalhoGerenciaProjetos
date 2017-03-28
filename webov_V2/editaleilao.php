@@ -88,13 +88,7 @@ if ( isset( $_GET['del'] ) ) {
 	// Delete de cara (sem confirmação)
 	$pdo_insere = $conexao_pdo->prepare('DELETE FROM leilao WHERE id=?');
 	$pdo_insere->execute( array( (int)$_GET['del'] ) );
-	header('location: editaleilao.php');
+        header('location: editaleilao.php');
+        
 }
-//if ( isset( $_GET['edit'] ) ) {
-	// Delete de cara (sem confirmação)	$pdo_insere = $conexao_pdo->prepare('SELECT FROM usuarios WHERE user_id=?');
-//	$pdo_insere = $conexao_pdo->prepare('SELECT FROM usuarios WHERE user_id=?');
-//       $pdo_insere->execute( array( (int)$_GET['edit'] ) );
- //       $id= $_GET['user_id'];
-   //     
-     //   header('location: editasenha.php?id="$id"');
-//}
+
