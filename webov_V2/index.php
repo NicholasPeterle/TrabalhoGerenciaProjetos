@@ -25,7 +25,7 @@ include('login/redirect.php');
     		<a href="#" class="brand-logo">WeBov</a>
     		<ul id="nav-mobile" class="right hide-on-med-and-down">
     			<li><a href="#">Início</a></li>
-				<li><a href="sistema.php">Sistema</a></li>
+                        <li><a href="pesquisaraca.php">Sistema</a></li>
 				<li><a href="perfil.php">Perfil</a></li>
 				<li><a href="login/sair.php">Sair</a></li>
 			</ul>

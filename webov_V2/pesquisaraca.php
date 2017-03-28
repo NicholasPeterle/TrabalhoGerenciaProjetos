@@ -12,10 +12,19 @@
     	<div class="nav-wrapper container">
     		<a href="#" class="brand-logo">WeBov</a>
     		<ul id="nav-mobile" class="right hide-on-med-and-down">
-    			<li><a href="indexadmin.php">Início</a></li>
-				<li><a href="sistema_admin.php">Sistema</a></li>
-				<li><a href="edita.php">Usuários</a></li>
-				<li><a href="login/sair.php">Sair</a></li>
+                        <?php
+                         if($_SESSION['user_id'] == 1){
+                                echo '<li><a href="indexadmin.php">Início</a></li>';
+				echo '<li><a href="sistema_admin.php">Sistema</a></li>';
+				echo '<li><a href="edita.php">Usuários</a></li>';
+                         }
+                         else{
+                                echo '<li><a href="index.php">Início</a></li>';
+				echo '<li><a href="pesquisaraca.php">Sistema</a></li>';
+				echo '<li><a href="perfil.php">Perfil</a></li>';
+                         }
+			 ?> 
+                                <li><a href="login/sair.php">Sair</a></li>
 			</ul>
 		</div>
 	</nav>
