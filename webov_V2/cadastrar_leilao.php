@@ -3,7 +3,7 @@
 //TESTE
 session_start();
 
-if (empty($_SESSION['admin'])) {
+if ($_SESSION['user_id'] != 1) {
     return header('location: index.php');
 }
 
