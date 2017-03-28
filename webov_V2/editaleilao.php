@@ -1,4 +1,6 @@
 <?php
+$reais = "R$";
+$kg = "kg";
 // Inclui o arquivo de configuração
 include('login/config.php');
 
@@ -70,9 +72,9 @@ include('login/redirect.php');
 			echo '<td>' . $fetch['tipo'] . '</td>';
 			echo '<td>' . $fetch['idade'] . '</td>';
                         echo '<td>' . $fetch['sexo'] . '</td>';
-                        echo '<td>' . $fetch['peso'] . '</td>';
-                        echo '<td>' . $fetch['valor'] . '</td>';
-                        echo '<td>' . $fetch['valorkg'] . '</td>';
+                        echo '<td>' . $fetch['peso'] . $kg .'</td>';
+                        echo '<td>' . $reais .$fetch['valor'] . '</td>';
+                        echo '<td>' . $reais .$fetch['valorkg'] . '</td>';
 			echo '<td> <a style="color:red;" href="?del=' . $fetch['id'] . '">Apagar</a> </td>';
 			//echo '<td> <a style="color:red;" href="editasenha.php?nome='.$fetch['user_name'] .'&email='.$fetch['user'].'&id='.$fetch['user_id'].'">Editar</a> </td>';
                         echo '</tr>';
