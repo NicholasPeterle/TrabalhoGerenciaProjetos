@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
 // Inclui o arquivo de configuração
 include('login/config.php');
@@ -14,6 +13,7 @@ include('login/verifica_login.php');
 // o formulário de login
 include('login/redirect.php');
 ?>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">

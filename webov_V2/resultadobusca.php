@@ -15,7 +15,7 @@ include('login/redirect.php');
 
  if(isset($pesquisa)&&!empty($nome)){
 	
-        $stmt = $conexao_pdo->prepare("select * from leilao where tipo like :letra");
+        $stmt = $conexao_pdo->prepare("select * from leilao where tipo like :letra order by valor");
 	$stmt->bindValue(':letra', '%'.$nome.'%', PDO::PARAM_STR);
 	$stmt->execute();
 	$resultados = $stmt->rowCount();
